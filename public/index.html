@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SimplWorks.ai | AI Automation That Actually Delivers</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #0a0a0a;
+      color: #e0e0e0;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* NAV */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 100;
+      background: rgba(10, 10, 10, 0.9);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .logo {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .logo span { color: #4f8cff; }
+
+    .nav-links a {
+      color: #999;
+      text-decoration: none;
+      margin-left: 32px;
+      font-size: 0.9rem;
+      font-weight: 400;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover { color: #fff; }
+
+    .nav-cta {
+      background: #4f8cff !important;
+      color: #fff !important;
+      padding: 8px 20px;
+      border-radius: 6px;
+      font-weight: 500 !important;
+      transition: background 0.3s !important;
+    }
+
+    .nav-cta:hover { background: #3a6fd8 !important; }
+
+    /* HERO */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 120px 40px 80px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .hero-tag {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: #4f8cff;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      margin-bottom: 24px;
+    }
+
+    .hero h1 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 3.5rem;
+      font-weight: 700;
+      color: #fff;
+      line-height: 1.15;
+      margin-bottom: 24px;
+    }
+
+    .hero h1 em {
+      font-style: normal;
+      color: #4f8cff;
+    }
+
+    .hero-sub {
+      font-size: 1.2rem;
+      color: #888;
+      max-width: 600px;
+      margin-bottom: 40px;
+      line-height: 1.7;
+    }
+
+    .hero-cta {
+      display: inline-block;
+      background: #4f8cff;
+      color: #fff;
+      padding: 14px 36px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    .hero-cta:hover {
+      background: #3a6fd8;
+      transform: translateY(-2px);
+    }
+
+    /* SECTION DEFAULTS */
+    section {
+      padding: 100px 40px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .section-tag {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: #4f8cff;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      margin-bottom: 16px;
+    }
+
+    .section-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 16px;
+    }
+
+    .section-sub {
+      font-size: 1.05rem;
+      color: #777;
+      max-width: 600px;
+      margin-bottom: 60px;
+    }
+
+    /* DIVIDER */
+    .divider {
+      width: 100%;
+      height: 1px;
+      background: rgba(255, 255, 255, 0.06);
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    /* WHAT WE BUILD */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .service-card {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 12px;
+      padding: 36px 28px;
+      transition: border-color 0.3s, transform 0.2s;
+    }
+
+    .service-card:hover {
+      border-color: rgba(79, 140, 255, 0.3);
+      transform: translateY(-4px);
+    }
+
+    .service-icon {
+      font-size: 1.8rem;
+      margin-bottom: 16px;
+    }
+
+    .service-card h3 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 12px;
+    }
+
+    .service-card p {
+      font-size: 0.9rem;
+      color: #777;
+      line-height: 1.6;
+    }
+
+    /* HOW IT WORKS */
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 40px;
+    }
+
+    .step-num {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 3rem;
+      font-weight: 700;
+      color: rgba(79, 140, 255, 0.15);
+      margin-bottom: 12px;
+    }
+
+    .step h3 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 8px;
+    }
+
+    .step p {
+      font-size: 0.9rem;
+      color: #777;
+      line-height: 1.6;
+    }
+
+    /* WHO WE SERVE */
+    .verticals-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .vertical {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      padding: 24px;
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.04);
+      border-radius: 10px;
+    }
+
+    .vertical-icon { font-size: 1.4rem; flex-shrink: 0; margin-top: 2px; }
+
+    .vertical h4 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 4px;
+    }
+
+    .vertical p {
+      font-size: 0.85rem;
+      color: #666;
+    }
+
+    /* ABOUT */
+    .about-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: start;
+    }
+
+    .about-text p {
+      color: #888;
+      font-size: 1rem;
+      margin-bottom: 16px;
+      line-height: 1.7;
+    }
+
+    .about-stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+
+    .stat {
+      padding: 24px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 10px;
+    }
+
+    .stat-num {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 2rem;
+      font-weight: 700;
+      color: #4f8cff;
+      margin-bottom: 4px;
+    }
+
+    .stat-label {
+      font-size: 0.8rem;
+      color: #666;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    /* CLOSER */
+    .closer {
+      text-align: center;
+      padding: 100px 40px;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .closer h2 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 2.4rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 16px;
+    }
+
+    .closer p {
+      font-size: 1.05rem;
+      color: #777;
+      margin-bottom: 40px;
+    }
+
+    .closer-line {
+      font-size: 0.95rem;
+      color: #4f8cff;
+      font-style: italic;
+      margin-top: 40px;
+    }
+
+    /* CONTACT */
+    .contact-row {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .contact-item {
+      color: #888;
+      text-decoration: none;
+      font-size: 0.95rem;
+      transition: color 0.3s;
+    }
+
+    .contact-item:hover { color: #4f8cff; }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 40px;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      color: #444;
+      font-size: 0.8rem;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      nav { padding: 16px 20px; }
+      .nav-links { display: none; }
+      .hero { padding: 100px 20px 60px; }
+      .hero h1 { font-size: 2.2rem; }
+      .hero-sub { font-size: 1rem; }
+      section { padding: 60px 20px; }
+      .services-grid { grid-template-columns: 1fr; }
+      .steps { grid-template-columns: 1fr; gap: 32px; }
+      .verticals-grid { grid-template-columns: 1fr; }
+      .about-content { grid-template-columns: 1fr; gap: 40px; }
+      .section-title { font-size: 1.7rem; }
+      .closer h2 { font-size: 1.8rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="#" class="logo">Simpl<span>Works</span>.ai</a>
+    <div class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#process">Process</a>
+      <a href="#industries">Industries</a>
+      <a href="#about">About</a>
+      <a href="#contact" class="nav-cta">Get Started</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-tag">AI-Powered Web Design</div>
+    <h1>Landing pages that<br><em>actually convert.</em></h1>
+    <p class="hero-sub">Custom-built websites and landing pages designed to capture leads, tell your story, and make your business look like it means business. Fast. Clean. Done right.</p>
+    <a href="#contact" class="hero-cta">Book a Strategy Call</a>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="section-tag">What We Build</div>
+    <h2 class="section-title">Websites that work as hard as you do.</h2>
+    <p class="section-sub">Every site is custom-built. No templates. No WordPress themes. Just clean code that loads fast and converts.</p>
+
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">&#9670;</div>
+        <h3>Landing Pages</h3>
+        <p>High-converting single-page sites designed to capture leads, launch products, or announce your brand. Live in days, not weeks.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">&#9670;</div>
+        <h3>Business Websites</h3>
+        <p>Professional multi-section sites that tell your story, showcase your services, and give customers a reason to reach out.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">&#9670;</div>
+        <h3>Lead Capture Forms</h3>
+        <p>Smart forms wired to real databases. Every submission captured, stored, and ready for follow-up. No lost leads.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">&#9670;</div>
+        <h3>Email Signup Systems</h3>
+        <p>Build your audience from day one. Email capture integrated directly into your site with duplicate detection and instant confirmation.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">&#9670;</div>
+        <h3>Domain + Deployment</h3>
+        <p>Custom domain setup, SSL certificates, DNS configuration, and deployment handled end to end. You get a live URL, not a project file.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">&#9670;</div>
+        <h3>Mobile-First Design</h3>
+        <p>Every site is responsive from the start. Looks sharp on phones, tablets, and desktops. No pinching, no scrolling sideways.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- PROCESS -->
+  <section id="process">
+    <div class="section-tag">How It Works</div>
+    <h2 class="section-title">Three steps. No mystery.</h2>
+    <p class="section-sub">We map your workflows, build the system, and hand you the keys.</p>
+
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">01</div>
+        <h3>Map</h3>
+        <p>We audit your current workflows, identify where time and money are leaking, and design the automation architecture.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">02</div>
+        <h3>Build</h3>
+        <p>Custom-built systems using the right tools for the job. No templates. No generic solutions. Your logic, automated.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">03</div>
+        <h3>Deploy</h3>
+        <p>We launch, test, and refine. You get a system that runs with precision even when you're not watching.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- INDUSTRIES -->
+  <section id="industries">
+    <div class="section-tag">Who We Serve</div>
+    <h2 class="section-title">If you need a website, you're our client.</h2>
+    <p class="section-sub">We build for anyone who needs a professional web presence that actually works.</p>
+
+    <div class="verticals-grid">
+      <div class="vertical">
+        <div class="vertical-icon">&#9670;</div>
+        <div>
+          <h4>Startups + Launches</h4>
+          <p>Get your idea live fast with a landing page that captures interest and builds your email list before you even launch.</p>
+        </div>
+      </div>
+      <div class="vertical">
+        <div class="vertical-icon">&#9670;</div>
+        <div>
+          <h4>Small Businesses</h4>
+          <p>Professional sites that make your business look established, credible, and easy to contact.</p>
+        </div>
+      </div>
+      <div class="vertical">
+        <div class="vertical-icon">&#9670;</div>
+        <div>
+          <h4>Podcasts + Creators</h4>
+          <p>Custom sites to showcase your content, grow your audience, and give people a home base to find you.</p>
+        </div>
+      </div>
+      <div class="vertical">
+        <div class="vertical-icon">&#9670;</div>
+        <div>
+          <h4>Service Providers</h4>
+          <p>Consultants, agencies, freelancers. Sites that explain what you do and make it easy for clients to reach you.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="section-tag">About</div>
+    <h2 class="section-title">The person behind the systems.</h2>
+
+    <div class="about-content">
+      <div class="about-text">
+        <p>SimplWorks is founded by Stephanie Belote &mdash; a builder who taught herself to code because she needed things that actually worked.</p>
+        <p>No CS degree. No agency background. She learned HTML, CSS, JavaScript, database architecture, deployment pipelines, and AI-powered design tools from scratch. She builds every site by hand &mdash; no templates, no page builders, no drag-and-drop.</p>
+        <p>The result: fast, clean, custom websites that do exactly what they're supposed to do. Capture leads. Tell your story. Make your business look like it means business.</p>
+      </div>
+      <div class="about-stats">
+        <div class="stat">
+          <div class="stat-num">Hand</div>
+          <div class="stat-label">Coded</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">Fast</div>
+          <div class="stat-label">Turnaround</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">100%</div>
+          <div class="stat-label">Responsive</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">0</div>
+          <div class="stat-label">Templates</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- CTA / CLOSER -->
+  <div class="closer" id="contact">
+    <h2>Simple works.</h2>
+    <p>Stop paying for tools you don't use. Stop hiring for tasks a system can handle. Let's build something that actually runs.</p>
+
+    <form id="strategy-form" style="max-width: 480px; margin: 40px auto 0; text-align: left;">
+      <input type="text" id="lead-name" placeholder="Your name" required style="width: 100%; padding: 12px 16px; margin-bottom: 12px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; color: #fff; font-family: 'Inter', sans-serif; font-size: 0.95rem;">
+      <input type="email" id="lead-email" placeholder="Email" required style="width: 100%; padding: 12px 16px; margin-bottom: 12px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; color: #fff; font-family: 'Inter', sans-serif; font-size: 0.95rem;">
+      <input type="tel" id="lead-phone" placeholder="Phone (optional)" style="width: 100%; padding: 12px 16px; margin-bottom: 12px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; color: #fff; font-family: 'Inter', sans-serif; font-size: 0.95rem;">
+      <input type="text" id="lead-business" placeholder="Business name (optional)" style="width: 100%; padding: 12px 16px; margin-bottom: 12px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; color: #fff; font-family: 'Inter', sans-serif; font-size: 0.95rem;">
+      <textarea id="lead-message" placeholder="Tell me what you need automated" rows="4" style="width: 100%; padding: 12px 16px; margin-bottom: 16px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; color: #fff; font-family: 'Inter', sans-serif; font-size: 0.95rem; resize: vertical;"></textarea>
+      <button type="submit" id="submit-btn" class="hero-cta" style="width: 100%; border: none; cursor: pointer; font-family: 'Inter', sans-serif; text-align: center;">Book a Strategy Call</button>
+    </form>
+    <p id="form-status" style="margin-top: 16px; font-size: 0.9rem; color: #666; display: none;"></p>
+
+    <div class="contact-row" style="margin-top: 48px;">
+      <a href="mailto:stephanie@simplworks.ai" class="contact-item">stephanie@simplworks.ai</a>
+      <a href="tel:+16786174598" class="contact-item">678.617.4598</a>
+    </div>
+
+    <p class="closer-line">"Building automated systems that actually deliver."</p>
+  </div>
+
+  <script>
+    const SUPABASE_URL = 'https://eyqhnijwanhhxzitkyhn.supabase.co';
+    const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImV5cWhuaWp3YW5oaHh6aXRreWhuIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Njg1NzIzOTgsImV4cCI6MjA4NDE0ODM5OH0.Wu1RMtltWoNZP7Icl4LdzRyaBPYRXVZAMd3CRur7Jbo';
+
+    document.getElementById('strategy-form').addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const btn = document.getElementById('submit-btn');
+      const status = document.getElementById('form-status');
+      btn.disabled = true;
+      btn.textContent = 'Sending...';
+
+      const payload = {
+        name: document.getElementById('lead-name').value,
+        email: document.getElementById('lead-email').value,
+        phone: document.getElementById('lead-phone').value || null,
+        business: document.getElementById('lead-business').value || null,
+        message: document.getElementById('lead-message').value || null,
+        source: 'simplworks-website'
+      };
+
+      try {
+        const res = await fetch(SUPABASE_URL + '/rest/v1/strategy_call_leads', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'apikey': SUPABASE_KEY,
+            'Authorization': 'Bearer ' + SUPABASE_KEY,
+            'Prefer': 'return=minimal'
+          },
+          body: JSON.stringify(payload)
+        });
+
+        if (res.ok) {
+          status.style.display = 'block';
+          status.style.color = '#4f8cff';
+          status.textContent = "Got it. I'll be in touch within 24 hours.";
+          document.getElementById('strategy-form').reset();
+        } else {
+          throw new Error('Server error');
+        }
+      } catch (err) {
+        status.style.display = 'block';
+        status.style.color = '#666';
+        status.textContent = 'Something went wrong. Try again or email me directly.';
+      }
+
+      btn.disabled = false;
+      btn.textContent = 'Book a Strategy Call';
+    });
+  </script>
+
+  <!-- FOOTER -->
+  <footer>
+    <span style="color: #4f8cff;">&copy; 2026 SimplWorks.ai &mdash; All rights reserved.</span><br>
+    <span style="color: #4f8cff; font-size: 0.75rem;">Designed and built by <a href="https://simplworks.ai" style="color: #4f8cff; text-decoration: none;">SimplWorks.ai</a></span>
+  </footer>
+
+</body>
+</html>
