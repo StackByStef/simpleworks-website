@@ -1,0 +1,145 @@
+Let me go through V3 systematically and pull every block that had no home in the         
+  SiteShift frame.                                                                         
+                                                                                           
+  There are 6 orphan copy blocks from V3 that didn't get placed:
+                                                                                           
+  ---                                                       
+  BLOCK 1: Definition Block (sits between hero and services in V3)
+
+  SimplWorks.ai is a custom website development company that builds high-performance,
+  SEO-optimized websites for startups, small businesses, and service providers across the
+  United States. Every site is hand-coded — no templates, no page builders — structured for
+   modern search engines and AI assistants, and designed to generate leads and revenue.
+  Founded by Stephanie Belote, a 20+ year business operator turned developer, SimplWorks
+  delivers complete digital launches including website development, technical SEO, AI
+  search optimization, lead capture, managed hosting, and client support documentation.
+
+  ---
+  BLOCK 2: Services (6-card grid — "What We Build")
+
+  - Section tag: What We Build
+  - Headline: Built as Infrastructure. Not Decoration.
+  - Subtext: Every SimplWorks site is built for performance, visibility, and lead
+  generation from day one. No legacy sites, just clean, fast websites engineered to get
+  found by Google, by AI, and by the people who matter.
+
+  Cards:
+  1. Landing Pages — One-page sites built to capture leads, launch a product, or get your
+  idea in front of the right people fast. Live in days.
+  2. Business Websites — Multi-section sites that tell your story, show what you do, and
+  give customers a clear reason to reach out.
+  3. Lead Capture Forms — Smart forms connected to real databases. Every submission
+  captured and stored — no leads lost, no follow-up gaps.
+  4. Email Signup — Build your audience from day one. Email capture built into your site
+  with duplicate detection and instant confirmation.
+  5. Domain + Deployment — Custom domain, SSL, DNS — all handled. You get a live URL you
+  can send to anyone, not a project file sitting in a folder.
+  6. Mobile-Ready Design — Every site looks sharp on phones, tablets, and desktops. No
+  pinching, no broken layouts, no sideways scrolling.
+
+  ---
+  BLOCK 3: Who We Serve (4-card vertical grid)
+
+  - Section tag: Who We Serve
+  - Headline: We build for businesses that need results. Not just a redesign.
+  - Subtext: If your website isn't generating leads, you're leaving money on the table.
+  That's what we fix.
+
+  Cards:
+  1. Startups & New Ventures — Get live fast with a site that captures interest and starts
+  building your audience before you've officially launched.
+  2. Small Businesses — Sites that make your business look established, professional, and
+  easy to contact. First impressions close deals.
+  3. Creators & Podcasts — A home base for your content — showcase episodes, grow your
+  list, give people one place to find everything you do.
+  4. Service Providers — Consultants, freelancers, agencies — sites that explain what you
+  offer and make it easy for clients to say yes.
+
+  ---
+  BLOCK 4: Why AI-Ready Matters (prose section, no cards)
+
+  - Section tag: Built for How Search Works Now
+  - Headline: Google isn't the only thing finding your business anymore
+
+  Body (3 paragraphs):
+  AI assistants — ChatGPT, Perplexity, Google AI Overview — are increasingly how people
+  find businesses. They don't send traffic to links. They summarize answers. If your site
+  isn't structured to be found and quoted by those systems, you're invisible to a growing
+  share of your market.
+
+  Every SimplWorks site is built for both: traditional search rankings and AI-driven
+  discovery. That's not an add-on. It's how we build.
+
+  Your business should show up wherever your customers are looking — whether that's a
+  search results page or an AI assistant answering a question at 11pm on a phone. We make
+  sure it does.
+
+  ---
+  BLOCK 5: About (text + 4 highlight cards)
+
+  - Section tag: About
+  - Headline: Built by someone who understands business. Not just code.
+
+  Bio (3 paragraphs):
+  SimplWorks was founded by Stephanie Belote. Before she ever wrote a line of code, she
+  spent over two decades in the business world — corporate staffing at AT&T, national
+  account management at First Union Bank, building and running a healthcare consulting
+  company that helped medical practices increase their revenue, and years as a marketing
+  rep in the insurance industry learning exactly how businesses attract and retain
+  customers.
+
+  That experience is the foundation. She doesn't just build websites — she understands how
+  businesses make money, where leads get lost, and what makes someone pick up the phone or
+  fill out a form. These are not design projects. They are revenue systems.
+
+  She taught herself to code because she was tired of tools that looked good but didn't
+  deliver. Every site is hand-built — no templates, no page builders. Clean code, fast
+  performance, real results.
+
+  Highlight cards:
+  1. 20+ Years in Business — Corporate staffing, healthcare consulting, insurance
+  marketing, national accounts
+  2. Hand-Coded — No templates, no page builders — every site built from scratch
+  3. One Week to Live — Strategy call to live site, fast
+  4. Revenue-Focused — Sites designed to bring in business, not just look good
+
+  ---
+  BLOCK 6: FAQ (8 accordion items)
+
+  - Section tag: FAQ
+  - Headline: Questions I hear a lot
+
+  1. How long does a project take? — About a week from strategy call to live site. If
+  there's something complex — custom integrations, large content migrations — it might take
+   a little longer, but you'll know the timeline upfront.
+  2. Can you fix my existing site or do I have to start over? — Depends on what you're
+  working with. If the bones are solid, we can revamp it. If it's the thing holding you
+  back, we'll recommend starting fresh. We'll figure that out together on the strategy
+  call.
+  3. Is SEO included? — Yes. Every site ships with optimized metadata, structured data,
+  fast load times, mobile responsiveness, and clean semantic HTML. Built into the process —
+   not charged as an extra.
+  4. What about AI search — will my site show up in ChatGPT or Google AI? — That's built in
+   too. We structure your content so AI systems can find, understand, and reference your
+  business — not just link to it. It's called GEO (Generative Engine Optimization), and
+  most web designers aren't doing this yet. We build it in from the start.
+  5. What does "conversion-focused" mean? — It means the site is designed to get visitors
+  to do something — fill out a form, book a call, sign up, buy. The layout, the copy, the
+  button placement — it's all intentional, not decorative.
+  6. Do you manage hosting after launch? — Yes. SimplWorks provides managed hosting and
+  infrastructure so you don't have to deal with servers, databases, or deployments. We
+  handle it.
+  7. What does a website cost? — Every project is scoped individually based on what you
+  need. We'll cover pricing on the strategy call once we understand your goals and what
+  needs to be built.
+  8. Do you only build websites? — Websites are the starting point. Every site we build is
+  designed to grow with your business — lead capture, email systems, hosting, and more are
+  all part of the package.
+
+  ---
+  Also left out from the closer: the contact info row — stephanie@simplworks.ai and
+  678.617.4598.
+
+  ---
+  That's everything. Six blocks of copy with no home in the current frame. Where do you
+  want them?

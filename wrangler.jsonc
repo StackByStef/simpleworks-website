@@ -1,7 +1,10 @@
 {
   "name": "simplworks-ai",
+  "main": "./src/index.js",
   "compatibility_date": "2026-02-06",
   "assets": {
-    "directory": "./public"
+    "directory": "./public",
+    "binding": "ASSETS",
+    "run_worker_first": ["/api/*"]
   }
 }

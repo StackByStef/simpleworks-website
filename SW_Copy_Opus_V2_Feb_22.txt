@@ -1,0 +1,210 @@
+Here's the final merged copy, top to bottom.
+
+---
+
+**NAV**
+
+Logo: Simpl**Works**.ai
+Links: Services · Process · Who We Serve · About · FAQ
+CTA Button: Get Started
+
+---
+
+**HERO**
+
+Eyebrow tag: Custom-Built. Hand-Coded. Live in About a Week.
+
+H1: Your website should be working for you — not sitting there doing nothing.
+
+Subtitle: Most business websites look fine and perform terribly. We build clean, fast, custom-coded sites that capture leads, rank on Google, and surface in AI search — so your business stays visible no matter how search evolves.
+
+Primary CTA: Book a Strategy Call
+Secondary CTA: See What We Build
+
+---
+
+**DEFINITION BLOCK** (visible paragraph directly under hero, before the first divider — Tier 4 GEO)
+
+SimplWorks.ai is a custom website development company that builds high-performance, SEO-optimized websites for startups, small businesses, and service providers across the United States. Every site is hand-coded — no templates, no page builders — structured for modern search engines and AI assistants, and designed to generate leads and revenue. Founded by Stephanie Belote, a 20+ year business operator turned developer, SimplWorks delivers complete digital launches including website development, technical SEO, AI search optimization, lead capture, managed hosting, and client support documentation.
+
+---
+
+**SECTION: SERVICES**
+
+Tag: What We Build
+Headline: Everything you need to show up online and actually get results.
+Subtitle: Custom-built. No templates. No WordPress themes. No drag-and-drop page builders. Just clean, fast websites engineered to do what they're supposed to do.
+
+**Landing Pages**
+One-page sites built to capture leads, launch a product, or get your idea in front of the right people fast. Live in days.
+
+**Business Websites**
+Multi-section sites that tell your story, show what you do, and give customers a clear reason to reach out.
+
+**Lead Capture Forms**
+Smart forms connected to real databases. Every submission captured and stored — no leads lost, no follow-up gaps.
+
+**Email Signup**
+Build your audience from day one. Email capture built into your site with duplicate detection and instant confirmation.
+
+**Domain + Deployment**
+Custom domain, SSL, DNS — all handled. You get a live URL you can send to anyone, not a project file sitting in a folder.
+
+**Mobile-Ready Design**
+Every site looks sharp on phones, tablets, and desktops. No pinching, no broken layouts, no sideways scrolling.
+
+---
+
+**SECTION: PAIN POINTS**
+
+Tag: Sound Familiar?
+Headline: If any of these hit, we need to talk.
+Subtitle: You don't need another opinion on your website. You need someone to fix it.
+
+- Your website looks like it was built five years ago
+- People visit but never reach out
+- You're embarrassed to send someone your link
+- Your message isn't clear within the first five seconds
+- You've tried templates and they all look the same
+- You want a site that actually brings in business
+
+---
+
+**SECTION: WHO WE SERVE**
+
+Tag: Who We Serve
+Headline: We build for businesses that need results — not just a redesign.
+Subtitle: If your website isn't generating leads, you're leaving money on the table. That's what we fix.
+
+**Startups & New Ventures**
+Get live fast with a site that captures interest and starts building your audience before you've officially launched.
+
+**Small Businesses**
+Sites that make your business look established, professional, and easy to contact. First impressions close deals.
+
+**Creators & Podcasts**
+A home base for your content — showcase episodes, grow your list, give people one place to find everything you do.
+
+**Service Providers**
+Consultants, freelancers, agencies — sites that explain what you offer and make it easy for clients to say yes.
+
+---
+
+**SECTION: PROCESS**
+
+Tag: How It Works
+Headline: Three Steps. About a Week.
+Subtitle: No drawn-out timelines. No mystery. We figure out what you need, build it right, and get you live.
+
+**01 — Map**
+We look at what you have, figure out where it's falling short, and build a plan around your actual business goals — not a template.
+
+**02 — Build**
+Custom-coded from scratch with lead capture, mobile performance, search optimization, and AI discoverability built in. No shortcuts.
+
+**03 — Deploy**
+We launch, test everything, and make sure it runs right. You get a live site with managed hosting and ongoing support. You focus on your business.
+
+---
+
+**SECTION: WHY AI-READY MATTERS**
+
+Tag: Built for How Search Works Now
+Headline: Google isn't the only thing finding your business anymore.
+
+Copy: AI assistants — ChatGPT, Perplexity, Google AI Overview — are increasingly how people find businesses. They don't send traffic to links. They summarize answers. If your site isn't structured to be found and quoted by those systems, you're invisible to a growing share of your market.
+
+Every SimplWorks site is built for both: traditional search rankings and AI-driven discovery. That's not an add-on. It's how we build.
+
+---
+
+**SECTION: ABOUT**
+
+Tag: About
+Headline: Built by someone who understands business — not just code.
+
+**Paragraph 1:**
+SimplWorks is founded by Stephanie Belote. Before she ever wrote a line of code, she spent over two decades in the business world — corporate staffing at AT&T, national account management at First Union Bank, building and running a healthcare consulting company that helped medical practices increase their revenue, and years as a marketing rep in the insurance industry learning exactly how businesses attract and retain customers.
+
+**Paragraph 2:**
+That experience is the foundation. She doesn't just build websites — she understands how businesses make money, where leads get lost, and what makes someone pick up the phone or fill out a form. These are not design projects. They are revenue systems.
+
+**Paragraph 3:**
+She taught herself to code because she was tired of tools that looked good but didn't deliver. Every site is hand-built — no templates, no page builders. Clean code, fast performance, real results.
+
+**Highlight Cards:**
+
+**20+ Years in Business**
+Corporate staffing, healthcare consulting, insurance marketing, national accounts
+
+**Hand-Coded**
+No templates, no page builders — every site built from scratch
+
+**One Week to Live**
+Strategy call to live site, fast
+
+**Revenue-Focused**
+Sites designed to bring in business, not just look good
+
+---
+
+**SECTION: FAQ**
+
+Tag: FAQ
+Headline: Questions I hear a lot.
+
+**How long does a project take?**
+About a week from strategy call to live site. If there's something complex — custom integrations, large content migrations — it might take a little longer, but you'll know the timeline upfront.
+
+**Is SEO included?**
+Yes. Every site ships with optimized metadata, structured data, fast load times, mobile responsiveness, and clean semantic HTML. Built into the process — not charged as an extra.
+
+**Do you also optimize for AI search?**
+Yes. Every site includes GEO — Generative Engine Optimization — so your business can be found and cited by AI systems like ChatGPT, Perplexity, and Google AI Overview. Most web designers aren't doing this yet. We build it in from the start.
+
+**What does "conversion-focused" mean?**
+It means the site is designed to get visitors to do something — fill out a form, book a call, sign up, buy. The layout, the copy, the button placement — it's all intentional, not decorative.
+
+**Can you fix my existing site or do I have to start over?**
+Depends on what you're working with. If the bones are solid, we can revamp it. If it's the thing holding you back, we'll recommend starting fresh. We'll figure that out together on the strategy call.
+
+**What does a website cost?**
+Every project is scoped individually based on what you need. We'll cover pricing on the strategy call once we understand your goals and what needs to be built.
+
+**Do you only build websites?**
+Websites are the starting point. Every site we build is designed to grow with your business — lead capture, email systems, hosting, and more are all part of the package.
+
+---
+
+**SECTION: CTA / CLOSER**
+
+Headline: Simple works.
+
+Subtitle: Ready when you are. Fill out the form and I'll be back to you within 24 hours.
+
+Form fields: Name · Email · Phone (optional) · Business name (optional) · Tell me about your project
+
+Button: Book a Strategy Call
+
+Contact row: stephanie@simplworks.ai · 678.617.4598
+
+Closing tagline: *Every site hand-built. Every lead captured. No shortcuts.*
+
+---
+
+That's the final merged copy. The section order is:
+
+1. Nav
+2. Hero
+3. Definition block (GEO)
+4. Services
+5. Pain Points
+6. Who We Serve
+7. Process
+8. Why AI-Ready Matters
+9. About
+10. FAQ
+11. CTA / Closer
+12. Footer
+
+Review it and let me know what you want to adjust. Once you clear this, we move to layout and visual design.

@@ -1,0 +1,229 @@
+Here's the final clean copy, top to bottom, with all five fixes applied.
+
+---
+
+## NAV
+
+**Logo:** Simpl**Works**.ai
+
+**Links:** Services · Process · Who We Serve · About · FAQ
+
+**CTA Button:** Get Started
+
+---
+
+## HERO
+
+**Eyebrow tag:**
+Custom-Built. Hand-Coded. Live in About a Week.
+
+**H1:**
+Your website should work **for you** — not against you.
+
+**Subtitle:**
+Most business websites are outdated, confusing, or just sitting there doing nothing. We build clean, modern sites that capture leads, rank on Google, surface in AI search results, and actually help you grow. Done in about a week.
+
+**Primary CTA:** Book a Strategy Call
+**Secondary CTA:** See What We Deliver
+
+---
+
+## DEFINITION BLOCK
+*(Visible paragraph directly under hero — Tier 4 GEO)*
+
+SimplWorks.ai is a custom website development company that builds high-performance, SEO-optimized websites for startups, small businesses, and service providers across the United States. Every site is hand-coded — no templates, no page builders — structured for modern search engines and AI assistants, and designed to generate leads and revenue. Founded by Stephanie Belote, a 20+ year business operator turned developer, SimplWorks delivers complete digital launches including website development, technical SEO, AI search optimization, lead capture, managed hosting, and client support documentation.
+
+---
+
+## SERVICES
+
+**Section tag:** What We Deliver
+
+**Headline:**
+Built as Infrastructure — Not Decoration
+
+**Subtitle:**
+Every SimplWorks site is built for performance, visibility, and lead generation from day one. No templates. No WordPress themes. No drag-and-drop page builders. Just clean, fast websites that do what they're supposed to do.
+
+**Card 1: Custom Website Development**
+Hand-coded business websites built from scratch. Clean, fast, and built to scale — not assembled from someone else's template.
+
+**Card 2: Technical SEO Foundation**
+Optimized metadata, structured data, sitemap, and semantic HTML — all implemented before your site goes live. Not charged as an extra.
+
+**Card 3: AI Search Optimization (GEO)**
+Your site structured so Google AI, ChatGPT, and other AI search tools can find, understand, and recommend your business — not just link to it.
+
+**Card 4: Lead Capture & Forms**
+Smart forms connected to real databases. Every submission captured, stored, and ready for follow-up. No leads lost.
+
+**Card 5: Managed Hosting & Deployment**
+Custom domain, SSL, hosting, monitoring, and updates — all handled. You get a live URL you can send to anyone, not a project file sitting in a folder.
+
+**Card 6: Mobile-Ready Design**
+Every site looks sharp on phones, tablets, and desktops. No pinching, no sideways scrolling, no broken layouts.
+
+---
+
+## WHY AI-READY MATTERS
+
+**Section tag:** Built for How Search Works Now
+
+**Headline:**
+Search Is Changing. Your Website Should Too.
+
+**Body:**
+AI assistants — ChatGPT, Perplexity, Google AI Overview — are increasingly how people find businesses. They don't send traffic to blue links. They summarize answers. If your site isn't structured to be found and cited by those systems, you're invisible to a growing share of your market.
+
+Traditional SEO gets you ranked on Google. GEO — Generative Engine Optimization — gets your business quoted by AI. Most web designers aren't building for this yet. Every SimplWorks site is. It's not an add-on. It's how we build.
+
+Your business should show up wherever your customers are looking — whether that's a search results page or an AI assistant answering a question at 11pm on a phone. We make sure it does.
+
+---
+
+## PAIN POINTS
+
+**Section tag:** Sound Familiar?
+
+**Headline:**
+If any of these hit, we need to talk.
+
+**Subtitle:**
+You don't need another opinion on your website. You need someone to fix it.
+
+- Your website looks like it was built five years ago
+- People visit your site but never reach out
+- You're embarrassed to send someone your link
+- Your message isn't clear within the first 5 seconds
+- You've tried templates and they all look the same
+- You want a site that actually brings in business
+
+---
+
+## WHO WE SERVE
+
+**Section tag:** Who We Serve
+
+**Headline:**
+We build for businesses that need results.
+
+**Subtitle:**
+We build for people who need results — not just a redesign.
+
+**Startups & New Ventures**
+Get live fast with a site that captures interest and starts building your audience before you've even officially launched.
+
+**Small Businesses**
+Sites that make your business look established, professional, and easy to contact. First impressions matter.
+
+**Creators & Podcasts**
+A home base for your content — showcase episodes, grow your list, and give people one place to find everything you do.
+
+**Service Providers**
+Consultants, freelancers, agencies — sites that explain what you offer and make it easy for clients to say yes.
+
+---
+
+## PROCESS
+
+**Section tag:** How It Works
+
+**Headline:**
+Three Steps. About a Week.
+
+**Subtitle:**
+No drawn-out timelines. No mystery. We figure out what you need, build it, and get you live.
+
+**01 — Map**
+We look at what you have now, figure out where it's falling short, and build a plan around your actual business goals.
+
+**02 — Build**
+Custom-coded from scratch with SEO, structured data, performance optimization, and lead capture built in. No shortcuts.
+
+**03 — Deploy**
+We launch, test everything, and make sure it runs right. You get a live site, managed hosting, and ongoing support. You focus on your business.
+
+---
+
+## ABOUT
+
+**Section tag:** About
+
+**Headline:**
+Built by someone who understands business — not just code.
+
+**Paragraph 1:**
+SimplWorks was founded by Stephanie Belote. Before she ever wrote a line of code, she spent over two decades in the business world — corporate staffing at AT&T, national account management at First Union Bank, running a healthcare consulting company that helped medical practices increase their revenue, and years as a marketing rep in the insurance industry learning exactly how businesses attract and retain customers.
+
+**Paragraph 2:**
+That experience is the foundation. She doesn't just build websites — she understands how businesses actually make money, where leads get lost, and what makes someone pick up the phone or fill out a form.
+
+**Paragraph 3:**
+She taught herself to code because she was tired of tools that looked good but didn't deliver. Every site is hand-built — no templates, no page builders. These aren't design projects. They're revenue systems.
+
+**Highlight Cards:**
+
+- **20+ Years in Business** — Corporate staffing, healthcare consulting, insurance marketing, national accounts
+- **Hand-Coded** — No templates, no page builders — every site built from scratch
+- **One Week to Live** — Strategy call to live site, fast
+- **Revenue-Focused** — Sites designed to bring in business, not just look good
+
+---
+
+## FAQ
+
+**Section tag:** FAQ
+
+**Headline:**
+Questions I hear a lot.
+
+**How long does a project take?**
+Most projects launch within about a week from strategy call to live site. If there's something complex — custom integrations, large content migrations — it might take a little longer, but you'll know the timeline upfront.
+
+**Can you fix my existing site or do I have to start over?**
+Depends on what you're working with. If the bones are solid, we can revamp it. If it's the thing holding you back, we'll recommend starting fresh. We'll figure that out together on the strategy call.
+
+**Is SEO included?**
+Yes. Every site ships with optimized metadata, structured data, fast load times, mobile responsiveness, and clean semantic HTML. It's built into the process — not charged as an extra.
+
+**What about AI search — will my site show up in ChatGPT or Google AI?**
+That's built in too. We structure your content so AI systems can find, understand, and reference your business — not just link to it. It's called GEO (Generative Engine Optimization), and it's part of every build.
+
+**What does "conversion-focused" mean?**
+It means the site is designed to get visitors to do something — fill out a form, book a call, sign up, buy. The layout, the copy, the button placement — it's all intentional, not decorative.
+
+**Do you manage hosting after launch?**
+Yes. SimplWorks provides managed hosting and infrastructure so you don't have to deal with servers, databases, or deployments. We handle it.
+
+**What does a website cost?**
+Every project is scoped individually based on what you need. We'll cover pricing on the strategy call once we understand your goals and what needs to be built.
+
+**Do you only build websites?**
+Websites are the starting point. SimplWorks is growing — we're adding more tools and services to help businesses run smarter. The website is just the front door.
+
+---
+
+## CONTACT / CLOSER
+
+**Headline:**
+Simple works.
+
+**Sub:**
+Ready when you are. Fill out the form and I'll be back to you within 24 hours.
+
+**Form fields:** Name · Email · Phone (optional) · Business name (optional) · Tell me about your project
+
+**Button:** Book a Strategy Call
+
+**Contact row:** stephanie@simplworks.ai · 678.617.4598
+
+**Closing tagline:**
+*These aren't design projects. They're revenue systems.*
+
+---
+
+That's the locked copy. The five fixes are in: new eyebrow tag, expanded "Why AI-Ready Matters" section, cleaned up "Who We Serve" headline, action-forward closer sub-copy, and a closing tagline that sounds like the brand.
+
+One note before you hand this to Cortex: the "Who We Serve" subtitle still reads *"We build for people who need results — not just a redesign"* — which now pairs with a headline that says something slightly different rather than repeating it. That's intentional and it works. Just flagging it so you don't second-guess it later.
+
+Ready to move to layout and visual design whenever you are.

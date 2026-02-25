@@ -12,7 +12,7 @@
     --cream: #ebe6dd;
     --accent: #4f8cff;
     --accent-glow: #3a6fd8;
-    --muted: #8a8578;
+    --muted: #9ca3af;
     --dark-card: #141412;
     --dark-card-border: #2a2822;
     --green: #34d399;
@@ -53,7 +53,7 @@
   }
   .logo span { color: var(--accent); }
   nav a {
-    color: var(--muted);
+    color: #9ca3af;
     text-decoration: none;
     font-size: 0.9rem;
     font-weight: 500;
@@ -100,7 +100,7 @@
     padding: 0.6rem 1.4rem;
     border-radius: 100px;
     font-family: 'Instrument Serif', serif;
-    font-size: 1.8rem;
+    font-size: clamp(3.5rem, 8vw, 6rem);
     font-weight: 700;
     color: var(--accent);
     letter-spacing: 0.12em;
@@ -132,7 +132,7 @@
   }
   .hero-sub {
     font-size: 1.2rem;
-    color: var(--muted);
+    color: #9ca3af;
     max-width: 580px;
     margin-top: 1.5rem;
     line-height: 1.7;
@@ -179,38 +179,6 @@
     to { opacity: 1; transform: translateY(0); }
   }
 
-  /* ── SCROLL TICKER ── */
-  .ticker-wrap {
-    border-top: 1px solid var(--dark-card-border);
-    border-bottom: 1px solid var(--dark-card-border);
-    overflow: hidden;
-    padding: 1.2rem 0;
-    background: var(--dark-card);
-  }
-  .ticker {
-    display: flex;
-    gap: 3rem;
-    animation: scroll 25s linear infinite;
-    width: max-content;
-  }
-  .ticker span {
-    font-family: 'Instrument Serif', serif;
-    font-size: 1.1rem;
-    color: var(--muted);
-    white-space: nowrap;
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-  }
-  .ticker span::after {
-    content: '◆';
-    color: var(--accent);
-    font-size: 0.5rem;
-  }
-  @keyframes scroll {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
-  }
 
   /* ── SECTIONS ── */
   section { padding: 6rem 3rem; }
@@ -224,13 +192,13 @@
   }
   .section-title {
     font-family: 'Instrument Serif', serif;
-    font-size: clamp(2.2rem, 5vw, 3.8rem);
+    font-size: clamp(2rem, 4vw, 3.2rem);
     line-height: 1.15;
     letter-spacing: -0.02em;
     max-width: 700px;
   }
   .section-sub {
-    color: var(--muted);
+    color: #9ca3af;
     font-size: 1.05rem;
     line-height: 1.7;
     max-width: 600px;
@@ -266,8 +234,9 @@
     margin-bottom: 0.75rem;
   }
   .problem-card p {
-    color: var(--muted);
+    color: #9ca3af;
     line-height: 1.7;
+    font-size: 0.95rem;
   }
 
   /* ── COMPARISON ── */
@@ -402,7 +371,7 @@
     margin-top: 0.5rem;
   }
   .step p {
-    color: var(--muted);
+    color: #9ca3af;
     line-height: 1.7;
     font-size: 0.95rem;
   }
@@ -495,7 +464,7 @@
     nav { padding: 1rem 1.5rem; }
     .nav-links a:not(.nav-cta) { display: none; }
     section, .hero { padding-left: 1.5rem; padding-right: 1.5rem; }
-    .problem-grid, .compare-grid, .process-steps, .stats, .urgency-points, .services-grid, .about-stats { grid-template-columns: 1fr; }
+    .problem-grid, .compare-grid, .process-steps, .stats, .urgency-points, .services-grid, .about-highlights { grid-template-columns: 1fr; }
     .compare-grid { gap: 1rem; }
     .compare-vs { padding: 0.5rem 0; }
     footer { flex-direction: column; gap: 1rem; text-align: center; }
@@ -544,29 +513,19 @@
     padding: 0 1.5rem 1.25rem;
   }
 
-  /* ── ABOUT STAT STRIP ── */
-  .about-stats {
+  /* ── ABOUT HIGHLIGHTS (4-col) ── */
+  .about-highlights {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
-    margin-top: 3.5rem;
-    padding: 3rem 0;
-    border-top: 1px solid var(--dark-card-border);
-    border-bottom: 1px solid var(--dark-card-border);
-    text-align: center;
+    margin-top: 3rem;
   }
-  .about-stat-num {
-    font-family: 'Instrument Serif', serif;
-    font-size: clamp(2rem, 4vw, 3rem);
-    color: var(--accent);
-    letter-spacing: -0.03em;
-    line-height: 1.1;
+  .about-highlights .problem-card {
+    transition: all 0.3s ease;
   }
-  .about-stat-label {
-    color: var(--muted);
-    font-size: 0.9rem;
-    margin-top: 0.5rem;
-    line-height: 1.5;
+  .about-highlights .problem-card:hover {
+    border-color: rgba(79, 140, 255, 0.5);
+    box-shadow: 0 0 15px rgba(79, 140, 255, 0.15);
     transform: translateY(-3px);
   }
 
@@ -636,6 +595,7 @@
     0%, 100% { opacity: 1; }
     50% { opacity: 0; }
   }
+
 </style>
 </head>
 <body>
@@ -649,38 +609,41 @@
     <a href="#clients">Who We Serve</a>
     <a href="#about">About</a>
     <a href="#faq">FAQ</a>
-    <a href="#audit" class="nav-cta">Get a Free Website Audit</a>
+    <a href="#audit" class="nav-cta">Get a Free Audit →</a>
   </div>
 </nav>
 
 <!-- HERO -->
 <section class="hero">
   <div class="hero-badge"><span class="typewriter-text" id="typewriter"></span><span class="typewriter-cursor" id="typewriter-cursor"></span><div class="pulse" id="typewriter-pulse" style="display:none;"></div></div>
-  <h1>Your Website Should Work For You.<br>Not Cost You <span style="color: var(--white);">Customers.</span></h1>
-  <p class="hero-sub">Most business websites look fine and perform terribly. We build the ones that actually work.</p>
+  <h1>Your Website Should <em>Work</em> For You.<br>Not Cost You <span style="color: var(--white);">Customers.</span></h1>
+  <p class="hero-sub">90% of small business websites aren't generating leads. 70% don't even have a call-to-action. If yours is one of them, you're losing customers every day it stays that way.</p>
   <div class="hero-actions">
-    <a href="#cta" class="btn-primary">Book a Strategy Call</a>
+    <a href="#audit" class="btn-primary">Get a Free Audit →</a>
     <a href="#services" class="btn-secondary">See What We Build</a>
   </div>
 </section>
 
-<!-- TICKER -->
-<div class="ticker-wrap">
-  <div class="ticker">
-    <span>90% of small businesses underutilize their website</span>
-    <span>70% of business homepages have no call-to-action</span>
-    <span>ChatGPT has 400M+ weekly users</span>
-    <span>Google AI Overviews now appear on 47% of searches</span>
-    <span>58% of Gen Z prefers AI over Google</span>
-    <span>AI-cited businesses get 3x more qualified leads</span>
-    <span>Your competitors are already optimizing for this</span>
-    <span>90% of small businesses underutilize their website</span>
-    <span>70% of business homepages have no call-to-action</span>
-    <span>ChatGPT has 400M+ weekly users</span>
-    <span>Google AI Overviews now appear on 47% of searches</span>
-    <span>58% of Gen Z prefers AI over Google</span>
-    <span>AI-cited businesses get 3x more qualified leads</span>
-    <span>Your competitors are already optimizing for this</span>
+<!-- MARQUEE -->
+<style>
+  .marquee-bar { border-top:1px solid #2a2822; border-bottom:1px solid #2a2822; overflow:hidden; padding:1.2rem 0; background:#141412; }
+  .marquee-track { display:flex; align-items:center; gap:0; animation:marqueedrift 25s linear infinite; width:max-content; }
+  .marquee-item { font-family:'Instrument Serif',serif; font-size:1.1rem; color:#9ca3af; white-space:nowrap; margin:0; }
+  .marquee-dot { font-family:'DM Sans',sans-serif; color:#4f8cff; font-size:1.5rem; margin:0 1.5rem; font-weight:900; line-height:1; }
+  @keyframes marqueedrift { 0%{transform:translateX(0)} 100%{transform:translateX(-50%)} }
+</style>
+<div class="marquee-bar">
+  <div class="marquee-track">
+    <p class="marquee-item">ChatGPT has 400M+ weekly users</p><span class="marquee-dot">&bull;</span>
+    <p class="marquee-item">Google AI Overviews now appear on 47% of searches</p><span class="marquee-dot">&bull;</span>
+    <p class="marquee-item">90% of small business websites aren't generating leads</p><span class="marquee-dot">&bull;</span>
+    <p class="marquee-item">70% of homepages have no call-to-action</p><span class="marquee-dot">&bull;</span>
+    <p class="marquee-item">Your competitors are already optimizing for this</p><span class="marquee-dot">&bull;</span>
+    <p class="marquee-item">ChatGPT has 400M+ weekly users</p><span class="marquee-dot">&bull;</span>
+    <p class="marquee-item">Google AI Overviews now appear on 47% of searches</p><span class="marquee-dot">&bull;</span>
+    <p class="marquee-item">90% of small business websites aren't generating leads</p><span class="marquee-dot">&bull;</span>
+    <p class="marquee-item">70% of homepages have no call-to-action</p><span class="marquee-dot">&bull;</span>
+    <p class="marquee-item">Your competitors are already optimizing for this</p><span class="marquee-dot">&bull;</span>
   </div>
 </div>
 
@@ -861,22 +824,22 @@
   <p class="section-sub" style="margin-top: 2.5rem; max-width: 700px;"><span class="logo" style="font-size: inherit; display: inline;">Simpl<span>Works</span></span> was founded by Stephanie Belote. Before she ever wrote a line of code, she spent over two decades in the business world &mdash; corporate staffing at AT&amp;T, national account management at First Union Bank, building and running a healthcare consulting company that helped medical practices increase their revenue, and years as a marketing rep in the insurance industry learning exactly how businesses attract and retain customers.</p>
   <p class="section-sub" style="max-width: 700px;">That experience is the foundation. She doesn't just build websites &mdash; she understands how businesses make money, where leads get lost, and what makes someone pick up the phone or fill out a form. These are not design projects. They are revenue systems.</p>
   <p class="section-sub" style="max-width: 700px;">She taught herself to code because she was tired of tools that looked good but didn't deliver. Every site is hand-built &mdash; no templates, no page builders. Clean code, fast performance, real results.</p>
-  <div class="about-stats">
-    <div class="about-stat">
-      <div class="about-stat-num">20+</div>
-      <div class="about-stat-label">Years in business</div>
+  <div class="about-highlights">
+    <div class="problem-card">
+      <h3>20+ Years in Business</h3>
+      <p>Corporate staffing, healthcare consulting, insurance marketing, national accounts</p>
     </div>
-    <div class="about-stat">
-      <div class="about-stat-num">100%</div>
-      <div class="about-stat-label">Hand-coded, no templates</div>
+    <div class="problem-card">
+      <h3>Hand-Coded</h3>
+      <p>No templates, no page builders &mdash; every site built from scratch</p>
     </div>
-    <div class="about-stat">
-      <div class="about-stat-num">~1 Week</div>
-      <div class="about-stat-label">Strategy call to live site</div>
+    <div class="problem-card">
+      <h3>One Week to Live</h3>
+      <p>Strategy call to live site, fast</p>
     </div>
-    <div class="about-stat">
-      <div class="about-stat-num">Revenue-First</div>
-      <div class="about-stat-label">Every site built to convert</div>
+    <div class="problem-card">
+      <h3>Revenue-Focused</h3>
+      <p>Sites designed to bring in business, not just look good</p>
     </div>
   </div>
 </section>
@@ -942,7 +905,7 @@
     <input type="email" id="audit-email" class="form-input" placeholder="Email" required>
     <input type="text" id="audit-url" class="form-input" placeholder="Your website URL (optional)">
     <input type="tel" id="audit-phone" class="form-input" placeholder="Phone (optional)">
-    <button type="submit" id="audit-submit-btn" class="btn-primary form-submit">Get Your Free Website Audit</button>
+    <button type="submit" id="audit-submit-btn" class="btn-primary form-submit">Get Your Free Audit →</button>
   </form>
   <p id="audit-form-status" style="margin-top: 16px; font-size: 0.95rem; color: var(--muted); display: none; text-align: center;"></p>
 </section>
@@ -959,7 +922,7 @@
     <input type="tel" id="strategy-phone" class="form-input" placeholder="Phone (optional)">
     <input type="text" id="strategy-business" class="form-input" placeholder="Business name (optional)">
     <textarea id="strategy-message" class="form-input" rows="4" placeholder="Tell me about your project"></textarea>
-    <button type="submit" id="strategy-submit-btn" class="btn-primary form-submit">Book a Strategy Call</button>
+    <button type="submit" id="strategy-submit-btn" class="btn-primary form-submit">Book a Strategy Call →</button>
   </form>
   <p id="strategy-form-status" style="margin-top: 16px; font-size: 0.95rem; color: var(--muted); display: none; text-align: center;"></p>
 
@@ -1067,7 +1030,7 @@
     }
 
     btn.disabled = false;
-    btn.textContent = 'Get Your Free Website Audit';
+    btn.textContent = 'Get Your Free Audit \u2192';
   });
 
   document.getElementById('strategy-form').addEventListener('submit', async function(e) {
@@ -1122,7 +1085,7 @@
     }
 
     btn.disabled = false;
-    btn.textContent = 'Book a Strategy Call';
+    btn.textContent = 'Book a Strategy Call \u2192';
   });
 </script>
 </body>

@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SiteShift — Your Website Is Invisible to AI. We Fix That.</title>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --black: #0a0a0a;
+    --white: #f5f2ed;
+    --cream: #ebe6dd;
+    --accent: #e85d26;
+    --accent-glow: #ff7a45;
+    --muted: #8a8578;
+    --dark-card: #141412;
+    --dark-card-border: #2a2822;
+    --green: #34d399;
+    --red: #ef4444;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--black);
+    color: var(--white);
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    padding: 1.25rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    backdrop-filter: blur(20px);
+    background: rgba(10,10,10,0.7);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+  }
+  .logo {
+    font-family: 'Instrument Serif', serif;
+    font-size: 1.6rem;
+    letter-spacing: -0.02em;
+    color: var(--white);
+  }
+  .logo span { color: var(--accent); }
+  nav a {
+    color: var(--muted);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+  nav a:hover { color: var(--white); }
+  .nav-links { display: flex; gap: 2.5rem; align-items: center; }
+  .nav-cta {
+    background: var(--accent);
+    color: var(--black) !important;
+    padding: 0.6rem 1.4rem;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: background 0.3s, transform 0.2s;
+  }
+  .nav-cta:hover { background: var(--accent-glow); transform: translateY(-1px); }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 8rem 3rem 4rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -30%;
+    right: -10%;
+    width: 700px;
+    height: 700px;
+    background: radial-gradient(circle, rgba(232,93,38,0.12) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(232,93,38,0.1);
+    border: 1px solid rgba(232,93,38,0.25);
+    padding: 0.5rem 1rem;
+    border-radius: 100px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 2rem;
+    width: fit-content;
+    animation: fadeInUp 0.8s ease both;
+  }
+  .hero-badge .pulse {
+    width: 8px; height: 8px;
+    background: var(--accent);
+    border-radius: 50%;
+    animation: pulse 2s ease infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(1.5); }
+  }
+  .hero h1 {
+    font-family: 'Instrument Serif', serif;
+    font-size: clamp(3rem, 7vw, 5.5rem);
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+    max-width: 900px;
+    animation: fadeInUp 0.8s ease 0.1s both;
+  }
+  .hero h1 em {
+    font-style: italic;
+    color: var(--accent);
+  }
+  .hero-sub {
+    font-size: 1.2rem;
+    color: var(--muted);
+    max-width: 580px;
+    margin-top: 1.5rem;
+    line-height: 1.7;
+    animation: fadeInUp 0.8s ease 0.2s both;
+  }
+  .hero-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2.5rem;
+    animation: fadeInUp 0.8s ease 0.3s both;
+  }
+  .btn-primary {
+    background: var(--accent);
+    color: var(--black);
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .btn-primary:hover { background: var(--accent-glow); transform: translateY(-2px); box-shadow: 0 8px 30px rgba(232,93,38,0.3); }
+  .btn-secondary {
+    background: transparent;
+    color: var(--white);
+    padding: 1rem 2rem;
+    border: 1px solid var(--dark-card-border);
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-decoration: none;
+  }
+  .btn-secondary:hover { border-color: var(--muted); background: rgba(255,255,255,0.03); }
+
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ── SCROLL TICKER ── */
+  .ticker-wrap {
+    border-top: 1px solid var(--dark-card-border);
+    border-bottom: 1px solid var(--dark-card-border);
+    overflow: hidden;
+    padding: 1.2rem 0;
+    background: var(--dark-card);
+  }
+  .ticker {
+    display: flex;
+    gap: 3rem;
+    animation: scroll 25s linear infinite;
+    width: max-content;
+  }
+  .ticker span {
+    font-family: 'Instrument Serif', serif;
+    font-size: 1.1rem;
+    color: var(--muted);
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  .ticker span::after {
+    content: '◆';
+    color: var(--accent);
+    font-size: 0.5rem;
+  }
+  @keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  /* ── SECTIONS ── */
+  section { padding: 6rem 3rem; }
+  .section-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--accent);
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  .section-title {
+    font-family: 'Instrument Serif', serif;
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    max-width: 700px;
+  }
+  .section-sub {
+    color: var(--muted);
+    font-size: 1.05rem;
+    line-height: 1.7;
+    max-width: 600px;
+    margin-top: 1rem;
+  }
+
+  /* ── PROBLEM SECTION ── */
+  .problem { background: var(--black); }
+  .problem-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 3.5rem;
+  }
+  .problem-card {
+    background: var(--dark-card);
+    border: 1px solid var(--dark-card-border);
+    border-radius: 16px;
+    padding: 2.5rem;
+    transition: border-color 0.3s, transform 0.3s;
+  }
+  .problem-card:hover {
+    border-color: rgba(232,93,38,0.3);
+    transform: translateY(-3px);
+  }
+  .problem-card .icon {
+    font-size: 2rem;
+    margin-bottom: 1.2rem;
+  }
+  .problem-card h3 {
+    font-family: 'Instrument Serif', serif;
+    font-size: 1.4rem;
+    margin-bottom: 0.75rem;
+  }
+  .problem-card p {
+    color: var(--muted);
+    line-height: 1.7;
+    font-size: 0.95rem;
+  }
+
+  /* ── COMPARISON ── */
+  .comparison { background: var(--dark-card); border-top: 1px solid var(--dark-card-border); border-bottom: 1px solid var(--dark-card-border); }
+  .compare-grid {
+    display: grid;
+    grid-template-columns: 1fr 60px 1fr;
+    gap: 0;
+    margin-top: 3.5rem;
+    align-items: start;
+  }
+  .compare-col {
+    padding: 2.5rem;
+    border-radius: 16px;
+  }
+  .compare-col.legacy {
+    background: rgba(239,68,68,0.04);
+    border: 1px solid rgba(239,68,68,0.15);
+  }
+  .compare-col.modern {
+    background: rgba(52,211,153,0.04);
+    border: 1px solid rgba(52,211,153,0.15);
+  }
+  .compare-col h3 {
+    font-family: 'Instrument Serif', serif;
+    font-size: 1.5rem;
+    margin-bottom: 0.3rem;
+  }
+  .compare-col .tag {
+    display: inline-block;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 700;
+    padding: 0.3rem 0.8rem;
+    border-radius: 100px;
+    margin-bottom: 1.5rem;
+  }
+  .legacy .tag { background: rgba(239,68,68,0.15); color: var(--red); }
+  .modern .tag { background: rgba(52,211,153,0.15); color: var(--green); }
+  .compare-col ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .compare-col li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--cream);
+  }
+  .compare-col li .marker {
+    flex-shrink: 0;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7rem;
+    margin-top: 2px;
+  }
+  .legacy .marker { background: rgba(239,68,68,0.15); color: var(--red); }
+  .modern .marker { background: rgba(52,211,153,0.15); color: var(--green); }
+  .compare-vs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    font-family: 'Instrument Serif', serif;
+    font-size: 1.1rem;
+    color: var(--muted);
+    font-style: italic;
+  }
+
+  /* ── STATS BANNER ── */
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 5rem 3rem;
+    text-align: center;
+  }
+  .stat-num {
+    font-family: 'Instrument Serif', serif;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    color: var(--accent);
+    letter-spacing: -0.03em;
+  }
+  .stat-label {
+    color: var(--muted);
+    font-size: 0.9rem;
+    margin-top: 0.3rem;
+    line-height: 1.5;
+  }
+
+  /* ── PROCESS ── */
+  .process-steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 3.5rem;
+    counter-reset: step;
+  }
+  .step {
+    background: var(--dark-card);
+    border: 1px solid var(--dark-card-border);
+    border-radius: 16px;
+    padding: 2.5rem;
+    position: relative;
+    transition: border-color 0.3s, transform 0.3s;
+  }
+  .step:hover { border-color: rgba(232,93,38,0.3); transform: translateY(-3px); }
+  .step::before {
+    counter-increment: step;
+    content: counter(step, decimal-leading-zero);
+    font-family: 'Instrument Serif', serif;
+    font-size: 3.5rem;
+    color: rgba(232,93,38,0.15);
+    position: absolute;
+    top: 1.2rem;
+    right: 1.5rem;
+    line-height: 1;
+  }
+  .step h3 {
+    font-family: 'Instrument Serif', serif;
+    font-size: 1.3rem;
+    margin-bottom: 0.75rem;
+    margin-top: 0.5rem;
+  }
+  .step p {
+    color: var(--muted);
+    line-height: 1.7;
+    font-size: 0.95rem;
+  }
+
+  /* ── URGENCY ── */
+  .urgency {
+    background: linear-gradient(135deg, rgba(232,93,38,0.06) 0%, transparent 50%);
+    border-top: 1px solid var(--dark-card-border);
+  }
+  .urgency-points {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-top: 3rem;
+  }
+  .urgency-point {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    padding: 1.5rem;
+    border-radius: 12px;
+    background: rgba(10,10,10,0.5);
+    border: 1px solid var(--dark-card-border);
+  }
+  .urgency-point .num {
+    font-family: 'Instrument Serif', serif;
+    font-size: 1.5rem;
+    color: var(--accent);
+    flex-shrink: 0;
+    line-height: 1;
+    margin-top: 2px;
+  }
+  .urgency-point h4 {
+    font-size: 1rem;
+    margin-bottom: 0.4rem;
+  }
+  .urgency-point p {
+    color: var(--muted);
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  /* ── CTA ── */
+  .final-cta {
+    text-align: center;
+    padding: 8rem 3rem;
+    position: relative;
+  }
+  .final-cta::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(232,93,38,0.1) 0%, transparent 60%);
+    pointer-events: none;
+  }
+  .final-cta .section-title {
+    margin: 0 auto;
+    text-align: center;
+    max-width: 800px;
+  }
+  .final-cta .section-sub {
+    margin: 1rem auto 0;
+    text-align: center;
+    max-width: 500px;
+  }
+  .final-cta .hero-actions {
+    justify-content: center;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    border-top: 1px solid var(--dark-card-border);
+    padding: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--muted);
+    font-size: 0.85rem;
+  }
+  footer .logo { font-size: 1.3rem; }
+  footer a { color: var(--muted); text-decoration: none; }
+  footer a:hover { color: var(--white); }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 900px) {
+    nav { padding: 1rem 1.5rem; }
+    .nav-links a:not(.nav-cta) { display: none; }
+    section, .hero { padding-left: 1.5rem; padding-right: 1.5rem; }
+    .problem-grid, .compare-grid, .process-steps, .stats, .urgency-points { grid-template-columns: 1fr; }
+    .compare-grid { gap: 1rem; }
+    .compare-vs { padding: 0.5rem 0; }
+    footer { flex-direction: column; gap: 1rem; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="logo">Site<span>Shift</span></div>
+  <div class="nav-links">
+    <a href="#problem">The Problem</a>
+    <a href="#comparison">Legacy vs AI-Ready</a>
+    <a href="#process">How It Works</a>
+    <a href="#cta" class="nav-cta">Get Your Free Audit →</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-badge"><div class="pulse"></div> The Rules of Search Have Changed</div>
+  <h1>Your Website Is <em>Invisible</em> to AI.<br>That's Costing You Customers.</h1>
+  <p class="hero-sub">Millions of people now ask AI — not Google — who to hire, where to eat, and what to buy. If your website isn't built for the AI era, you don't exist in those answers.</p>
+  <div class="hero-actions">
+    <a href="#cta" class="btn-primary">Get Your Free AI Visibility Audit →</a>
+    <a href="#problem" class="btn-secondary">See What's Changed</a>
+  </div>
+</section>
+
+<!-- TICKER -->
+<div class="ticker-wrap">
+  <div class="ticker">
+    <span>ChatGPT has 400M+ weekly users</span>
+    <span>Google AI Overviews now appear on 47% of searches</span>
+    <span>58% of Gen Z prefers AI over Google</span>
+    <span>AI-cited businesses get 3x more qualified leads</span>
+    <span>Your competitors are already optimizing for this</span>
+    <span>ChatGPT has 400M+ weekly users</span>
+    <span>Google AI Overviews now appear on 47% of searches</span>
+    <span>58% of Gen Z prefers AI over Google</span>
+    <span>AI-cited businesses get 3x more qualified leads</span>
+    <span>Your competitors are already optimizing for this</span>
+  </div>
+</div>
+
+<!-- PROBLEM -->
+<section class="problem" id="problem">
+  <div class="section-label">The Problem</div>
+  <h2 class="section-title">The internet just shifted beneath your feet.</h2>
+  <p class="section-sub">People don't just type keywords into Google anymore. They ask AI assistants for direct recommendations — and AI gives one answer, not ten blue links.</p>
+  <div class="problem-grid">
+    <div class="problem-card">
+      <div class="icon">🔇</div>
+      <h3>AI Can't Understand Your Site</h3>
+      <p>Legacy websites use vague marketing language and unstructured content. AI engines can't parse what you do, where you operate, or who you serve — so they recommend your competitor instead.</p>
+    </div>
+    <div class="problem-card">
+      <div class="icon">📉</div>
+      <h3>Google Is Changing Too</h3>
+      <p>Google's AI Overviews are replacing traditional results at the top of the page. Even on Google, if your site isn't structured for AI, you're getting pushed below the fold — or out of the answer entirely.</p>
+    </div>
+    <div class="problem-card">
+      <div class="icon">🏃</div>
+      <h3>Competitors Are Moving Now</h3>
+      <p>AI engines learn and reinforce. If a competitor gets cited first, that builds their authority, making AI cite them more. Every month you wait, the gap widens and the cost to catch up grows.</p>
+    </div>
+    <div class="problem-card">
+      <div class="icon">💀</div>
+      <h3>Your Old Site Is a Liability</h3>
+      <p>A poorly structured website doesn't just fail to help — it actively confuses AI engines, leading to wrong information being shared about your business to potential customers.</p>
+    </div>
+  </div>
+</section>
+
+<!-- COMPARISON -->
+<section class="comparison" id="comparison">
+  <div class="section-label">The Difference</div>
+  <h2 class="section-title">Legacy website vs. AI-ready website.</h2>
+  <p class="section-sub">It's not just a redesign. It's a fundamental shift in how your site communicates — to humans and to AI.</p>
+  <div class="compare-grid">
+    <div class="compare-col legacy">
+      <h3>Legacy Website</h3>
+      <div class="tag">Outdated</div>
+      <ul>
+        <li><span class="marker">✕</span>Built to look pretty for humans only</li>
+        <li><span class="marker">✕</span>Keyword-stuffed pages for old Google SEO</li>
+        <li><span class="marker">✕</span>Static pages that rarely get updated</li>
+        <li><span class="marker">✕</span>Vague copy: "We're the best! Call us today!"</li>
+        <li><span class="marker">✕</span>No structured data — AI has no idea what you do</li>
+        <li><span class="marker">✕</span>Invisible to ChatGPT, Perplexity, Gemini, Siri</li>
+        <li><span class="marker">✕</span>Losing traffic as Google shifts to AI Overviews</li>
+      </ul>
+    </div>
+    <div class="compare-vs"><em>vs.</em></div>
+    <div class="compare-col modern">
+      <h3>AI-Ready Website</h3>
+      <div class="tag">Future-Proof</div>
+      <ul>
+        <li><span class="marker">✓</span>Built for humans AND AI engines to understand</li>
+        <li><span class="marker">✓</span>SEO + GEO — optimized for search AND AI answers</li>
+        <li><span class="marker">✓</span>Dynamic, regularly updated content signals authority</li>
+        <li><span class="marker">✓</span>Conversational Q&A content that mirrors how people ask AI</li>
+        <li><span class="marker">✓</span>Full schema markup — AI knows exactly what you offer and where</li>
+        <li><span class="marker">✓</span>Shows up when AI recommends businesses to potential customers</li>
+        <li><span class="marker">✓</span>Dominates both traditional search and AI-generated results</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats">
+  <div>
+    <div class="stat-num">400M+</div>
+    <div class="stat-label">Weekly users asking AI for<br>business recommendations</div>
+  </div>
+  <div>
+    <div class="stat-num">0%</div>
+    <div class="stat-label">Of legacy websites optimized<br>for AI discovery</div>
+  </div>
+  <div>
+    <div class="stat-num">6 mo.</div>
+    <div class="stat-label">Window before early movers<br>lock in AI authority</div>
+  </div>
+</div>
+
+<!-- PROCESS -->
+<section id="process">
+  <div class="section-label">How It Works</div>
+  <h2 class="section-title">From invisible to inevitable — in three steps.</h2>
+  <p class="section-sub">We don't just make your site look good. We engineer it so AI engines understand, trust, and recommend your business.</p>
+  <div class="process-steps">
+    <div class="step">
+      <h3>AI Visibility Audit</h3>
+      <p>We test your current site against every major AI engine — ChatGPT, Gemini, Perplexity, Siri, and Google AI Overviews. You'll see exactly where you're invisible and what your competitors are doing instead.</p>
+    </div>
+    <div class="step">
+      <h3>SEO + GEO Rebuild</h3>
+      <p>We rebuild your site with full structured data, schema markup, entity clarity, and conversational Q&A content — engineered so both search engines and AI assistants can confidently recommend you.</p>
+    </div>
+    <div class="step">
+      <h3>Monitor & Dominate</h3>
+      <p>AI authority compounds over time. We continuously update your content, monitor your AI citations, and optimize your presence so you stay ahead as the landscape evolves.</p>
+    </div>
+  </div>
+</section>
+
+<!-- URGENCY -->
+<section class="urgency" id="urgency">
+  <div class="section-label">Why Now</div>
+  <h2 class="section-title">The window is closing. Here's why waiting costs you.</h2>
+  <div class="urgency-points">
+    <div class="urgency-point">
+      <div class="num">1</div>
+      <div>
+        <h4>First-Mover Advantage Is Real</h4>
+        <p>Most businesses haven't optimized for AI yet. The ones that move first will dominate AI recommendations while competitors remain invisible.</p>
+      </div>
+    </div>
+    <div class="urgency-point">
+      <div class="num">2</div>
+      <div>
+        <h4>AI Authority Compounds</h4>
+        <p>When AI cites you once, it builds trust — which makes it cite you more — which makes it harder for competitors to catch up. It's a flywheel you want spinning in your favor.</p>
+      </div>
+    </div>
+    <div class="urgency-point">
+      <div class="num">3</div>
+      <div>
+        <h4>You're Losing Deals You'll Never Know About</h4>
+        <p>When someone asks AI "who's the best [your service] near me?" and your business isn't in the answer — that customer went to a competitor. No click, no call, no trace.</p>
+      </div>
+    </div>
+    <div class="urgency-point">
+      <div class="num">4</div>
+      <div>
+        <h4>Every Month the Gap Widens</h4>
+        <p>This isn't a someday problem. AI adoption is accelerating. The businesses that optimize now will have an insurmountable head start within 6-12 months.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="final-cta" id="cta">
+  <div class="section-label">Take the First Step</div>
+  <h2 class="section-title">Find out if AI is recommending your business — or your competitor's.</h2>
+  <p class="section-sub">Get a free AI Visibility Audit. We'll test your site against every major AI engine and show you exactly where you stand.</p>
+  <div class="hero-actions" style="margin-top: 2.5rem;">
+    <a href="#" class="btn-primary" style="font-size:1.1rem; padding: 1.2rem 2.5rem;">Get Your Free AI Visibility Audit →</a>
+  </div>
+  <p style="color: var(--muted); font-size: 0.85rem; margin-top: 1.2rem;">No commitment. No pitch. Just clarity on where you stand.</p>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="logo">Site<span>Shift</span></div>
+  <div>© 2026 SiteShift. All rights reserved.</div>
+  <div><a href="#">Privacy</a> · <a href="#">Terms</a></div>
+</footer>
+
+</body>
+</html>
